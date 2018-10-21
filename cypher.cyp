@@ -15,5 +15,11 @@ CREATE (dan)-[:LIVES_IN{since:'01/01/2002'}]->(edinburgh)
 CREATE (tim)-[:LIVES_IN{since:'01/01/2001'}]->(london)
 CREATE (mat)-[l:LIVES_IN{since:'01/01/2001'}]->(glasgow)
 
+CREATE (uk:Country{name:'UK'})
+CREATE (india:Country{name:'India'})
 
+CREATE (glasgow)-[:CITY_OF]->(uk)
+CREATE (london)-[:CITY_OF]->(uk)
+CREATE (edinburgh)-[:CITY_OF]->(uk)
 
+CREATE (bangalore)-[:CITY_OF]->(india)
